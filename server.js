@@ -1,7 +1,7 @@
 const express = require('express')
-const app = express()
-const port = 3000
+const server = express()
+const port = 80
 
-app.get('/', (req, res) => res.send('Hello World!'))
+server.get('/', (req, res) => res.send('big yeet'))
 
-app.listen(port, () => console.log(`Server running`))
+server.listen(port, () => console.log(`Server running`))
