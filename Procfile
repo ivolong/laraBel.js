@@ -1,1 +1,1 @@
-worker: node index.js
+start: node node_modules/.bin/http-server
