@@ -1,0 +1,10 @@
+{
+    "name": "ivolong.co.uk",
+    "version": "0.1",
+    "description": "My personal website",
+    "main": "index.js",
+    "author": "Ivo Long",
+    "dependencies": {
+        "http": "*"
+    }
+}
