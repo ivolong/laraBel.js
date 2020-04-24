@@ -1,1 +1,1 @@
-start: node node_modules/.bin/http-server
+start: node server.js
