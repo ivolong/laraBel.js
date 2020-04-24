@@ -1,7 +1,6 @@
 const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const port = process.env.PORT
 
-express()
-  .get('/', (req, res) => res.send('big yeet'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+express().get('/', (req, res) => res.send('big yeet'))
+
+express().listen(port, () => console.log(`Server running`))
