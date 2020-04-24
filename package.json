@@ -4,6 +4,7 @@
     "description": "My personal website",
     "author": "Ivo Long",
     "dependencies": {
-        "express": "*"
+        "express": "*",
+        "path": "*"
     }
 }
