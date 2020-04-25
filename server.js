@@ -1,7 +1,7 @@
 const express = require('express')
-const php_express = require('php-express'){(
+const php_express = require('php-express')({
     binPath: 'php'
-)}
+})
 const app = express()
 const path = require('path')
 const port = process.env.PORT
