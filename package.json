@@ -5,7 +5,6 @@
     "author": "Ivo Long",
     "dependencies": {
         "express": "*",
-        "php-express": "*",
         "path": "*"
     }
 }
