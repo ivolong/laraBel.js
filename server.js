@@ -7,9 +7,9 @@ const path = require('path')
 const port = process.env.PORT
 
 app.set('views', './views');
-app.engine('php', phpExpress.engine);
+app.engine('php', php_express.engine);
 app.set('view engine', 'php');
-app.all(/.+\.php$/, phpExpress.router);
+app.all(/.+\.php$/, php_express.router);
 
 app.get('/', function (request, response) {
     response.sendFile(path.join(__dirname + '/index.php'))
