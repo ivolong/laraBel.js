@@ -12,4 +12,6 @@ route.get('/', function (req, res) {
   res.send('big yeet');
 })
 
+module.exports = router
+
 app.listen(port, () => console.log(`Server listening to port ${port}`))
