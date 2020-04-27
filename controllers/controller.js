@@ -1,1 +1,1 @@
-const staticController = require(__dirname + '/static-controller.js')
+const staticController = require(__dirname + '/staticController.js')
