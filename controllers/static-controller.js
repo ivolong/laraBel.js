@@ -1,5 +1,5 @@
-public class StaticController extends Controller {
-    public function index () {
+class StaticController extends Controller {
+    function index () {
         return "bigger yeet"
     }
 }
