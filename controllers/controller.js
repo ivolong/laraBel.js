@@ -1,5 +1,5 @@
-class controller {
-    index (request, response) {
+const controller = {
+    index: function (request, response) {
         return response.send("big yeet")
     }
 }
