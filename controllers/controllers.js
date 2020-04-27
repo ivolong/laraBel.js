@@ -1,4 +1,4 @@
-class controller {
+const controller = {
     static: function () {
         return require(__dirname + "/static.js")
     }
