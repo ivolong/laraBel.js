@@ -1,17 +1,14 @@
-const express = require('express')
-const app = express()
-const route = express.Router()
-const path = require('path')
-const port = process.env.PORT
+var express = require('express');
+var router = express.Router();
 
-// app.get('/', function (request, response) {
-//     response.sendFile(path.join(__dirname + '/index.html'))
-// })
-
-route.get('/', function (req, res) {
-  res.send('big yeet');
+// Home page route.
+router.get('/', function (req, res) {
+  res.send('Wiki home page');
 })
 
-module.exports = route
+// About page route.
+router.get('/about', function (req, res) {
+  res.send('About this wiki');
+})
 
-app.listen(port, () => console.log(`Server listening to port ${port}`))
+module.exports = router;
