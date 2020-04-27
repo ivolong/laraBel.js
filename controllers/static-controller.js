@@ -1,5 +1,5 @@
 class StaticController extends Controller {
-    function index () {
+    index () {
         return "bigger yeet"
     }
 }
