@@ -1,4 +1,4 @@
-class StaticController extends Controller {
+class StaticController {
     index () {
         return "bigger yeet"
     }
