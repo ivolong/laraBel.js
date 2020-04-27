@@ -3,3 +3,5 @@ class StaticController {
         return "bigger yeet"
     }
 }
+
+module.exports = StaticController
