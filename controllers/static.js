@@ -4,4 +4,4 @@ const static = {
     }
 }
 
-module.exports = static;
+module.exports = static
