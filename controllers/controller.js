@@ -1,7 +1,7 @@
-const static = {
+const controller = {
     index: function (request, response) {
         return response.send("big yeet")
     }
 }
 
-module.exports = static
+module.exports = controller
