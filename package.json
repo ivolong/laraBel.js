@@ -1,11 +1,12 @@
 {
-    "name": "ivolong.co.uk",
+    "name": "bMVC.js",
     "version": "1.0.0",
-    "description": "My personal website",
+    "description": "A basic model-view-controller framework in JavaScript",
     "author": "Ivo Long",
+    "license": "ISC",
     "dependencies": {
-        "express": "*",
+        "express": "4.17.1",
         "http": "*",
-        "path": "*"
+        "path": "0.12.7"
     }
 }
