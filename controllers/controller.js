@@ -1,6 +1,6 @@
 const controller = {
     index: function (request, response) {
-        return response.send("big yeet")
+        return response.send(process.env.app_name)
     }
 }
 
