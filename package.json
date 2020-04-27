@@ -5,6 +5,7 @@
     "author": "Ivo Long",
     "dependencies": {
         "express": "*",
+        "http": "*",
         "path": "*"
     }
 }
