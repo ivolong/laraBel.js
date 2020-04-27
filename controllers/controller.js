@@ -1,1 +1,6 @@
-const staticController = require(__dirname + '/staticController.js')
+let controller = {
+    index: function(request, response) {
+        return response.send("big yeet");
+}
+
+module.exports = controller;
