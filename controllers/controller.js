@@ -1,4 +1,4 @@
-class controller () {
+class controller {
     index (request, response) {
         return response.send("big yeet")
     }
