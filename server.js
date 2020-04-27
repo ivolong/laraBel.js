@@ -9,4 +9,4 @@ app.get('/', controller.staticController.index())
 
 app.listen(port, () => console.log(`Server listening to port ${port}`))
 
-module.exports = app
+module.exports = controller
