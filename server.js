@@ -7,6 +7,6 @@ const port = process.env.PORT
 const server = require("http").createServer(app)
 const routes = require(__dirname + "/routes.js")(app)
 
-app.use(express.static('public'))
+server.use(express.static('public'))
 
 server.listen(port, () => console.log("Server listening to port " + port))
