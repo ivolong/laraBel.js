@@ -6,7 +6,7 @@ const port = process.env.PORT
 const controller = require(__dirname + '/controllers/controller.js')
 
 app.get('/', function (request, response) {
-    response.sendFile(path.join(__dirname + '/index.html'))
+    response.send(controller.staticController.index())
 })
 
 app.listen(port, () => console.log(`Server listening to port ${port}`))
