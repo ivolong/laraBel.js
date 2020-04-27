@@ -1,4 +1,4 @@
-const controller = require(__dirname + '/controllers/controller.js')
+const controller = require(__dirname + '/controllers/controllers.js')
 
 module.exports = function(app) {
     app.get('/', controller.index)
