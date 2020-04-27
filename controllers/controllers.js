@@ -1,3 +1,7 @@
-const static = require(__dirname + "/static.js")
+class controller {
+    static: function () {
+        return require(__dirname + "/static.js")
+    }
+}
 
-module.exports = static
+module.exports = controller
