@@ -1,6 +1,6 @@
 const controller = {
     index: function (request, response) {
-        return response.sendFile("../views/index.html")
+        return response.sendFile(__dirname + "../views/index.html")
     }
 }
 
