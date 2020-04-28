@@ -1,12 +1,9 @@
 const path = require("path")
-
-function view (response, file_uri) {
-    return response.sendFile(path.join(__dirname + "/../views/" + file_uri))
-}
+const viewer = require(__dirname + "/../framework/viewer.js")
 
 const controller = {
     index: function (request, response) {
-        return view(response, "index.html")
+        return viewer.send(response, "index.html")
     }
 }
 
