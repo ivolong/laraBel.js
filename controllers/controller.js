@@ -1,6 +1,6 @@
 const controller = {
     index: function (request, response) {
-        return response.send(process.env.app_name)
+        return response.sendFile("../views/index.html")
     }
 }
 
