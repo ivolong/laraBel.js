@@ -1,4 +1,3 @@
-const path = require("path")
 const viewer = require(__dirname + "/../framework/viewer.js")
 
 const controller = {
