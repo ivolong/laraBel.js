@@ -1,6 +1,8 @@
+const path = require("path")
+
 const controller = {
     index: function (request, response) {
-        return response.sendFile(__dirname + "/../views/index.html")
+        return response.sendFile(path.join(__dirname + "/../views/index.html"))
     }
 }
 
