@@ -30,8 +30,4 @@ Create a controller file in `/controllers/` and follow the structure of the exis
 
 Declare the controller in `routes.js` so that it can be used:
 
-	const nameOfController = require(__dirname + "/controllers/nameOfController.js")
-
-Call the controller's function when declaring new routes:
-
-	app.get("/account/log-in", accountController.getLogin)
+	const nameOfController = require(__dirname + "/controllers/accountController.js")
