@@ -5,12 +5,12 @@
 # Registering routes
 
 <p>Declare in the format:</p>
-```javascript
+```
 app.method("/uri", controllerName.function)
 ```
 
 <p>For example:</p>
-```javascript
+```
 app.get("/about", controller.about)
 ```
 
@@ -21,11 +21,11 @@ app.get("/about", controller.about)
 <p>Create a controller file in `/controllers/` and follow the structure of the existing controller.</p>
 
 <p>Declare the controller in `routes.js` so that it can be used:</p>
-```javascript
+```
 const nameOfController = require(__dirname + "/controllers/nameOfController.js")
 ```
 
 <p>Call the controller's function in the router:</p>
-```javascript
+```
 app.get("/account/log-in", accountController.getLogin)
 ```
