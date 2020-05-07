@@ -1,10 +1,8 @@
 const path = require("path")
 const fs = require("fs")
 
-env_data = process.env
-
 module.exports = {
-    data: { env: env_data },
+    data: {},
     
     view_uri: null,
     
@@ -14,6 +12,10 @@ module.exports = {
     },
     
     with: function (new_data) {
+        for (property in process.env) {
+            this.data[property] = process.env[property]
+        }
+        
         this.data = Object.assign(new_data, this.data)
         return this
     },
@@ -23,7 +25,7 @@ module.exports = {
             if (error) {
                 return response.status(400).send("View not found")
             }
-	        console.log(this.data)
+            
             for (property in this.data) {
                 html = html.replace(
                     '{{ ' + property + ' }}',
