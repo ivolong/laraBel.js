@@ -5,7 +5,7 @@ const viewer = {
     view: null,
     
     file: function (file_uri) {
-        this.view = __dirname + "/../views/" + file_uri)
+        this.view = __dirname + "/../views/" + file_uri
     },
     
     with: function (data) {
