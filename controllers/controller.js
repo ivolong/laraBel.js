@@ -4,7 +4,7 @@ module.exports = {
     index: function (request, response) {
         return viewer.file("index.html")
             .with({
-                variable: "value"
+                framework: "NodeJS"
             })
             .send(response)
     },
