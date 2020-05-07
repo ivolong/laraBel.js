@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require("fs")
 
-const renderer = require(__dirname + "/controllers/renderer.js")
+const renderer = require(__dirname + "/framework/renderer.js")
 
 module.exports = {
     data: {},
