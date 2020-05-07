@@ -2,7 +2,7 @@ const path = require("path")
 const fs = require("fs")
 
 module.exports = {
-    data: null,
+    data: { env: { process.env } },
     
     view_uri: null,
     
