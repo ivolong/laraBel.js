@@ -41,3 +41,5 @@ JavaScript code can be executed in the controllers to return variables which can
 Variables can then be called in the view file using the syntax:
 
 	{{ variable }}
+
+Any variable in `.env` can be called in the view file using just its name.
