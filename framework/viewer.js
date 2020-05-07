@@ -1,8 +1,10 @@
 const path = require("path")
 const fs = require("fs")
 
+env_data = process.env
+
 module.exports = {
-    data: {},
+    data: { env: env_data },
     
     view_uri: null,
     
@@ -12,7 +14,6 @@ module.exports = {
     },
     
     with: function (new_data) {
-        this.data[env] = Object.assign(process.env, this.data)
         this.data = Object.assign(new_data, this.data)
         return this
     },
