@@ -12,6 +12,7 @@ module.exports = {
     },
     
     with: function (new_data) {
+        this.data = Object.assign(process.env, this.data)
         this.data = Object.assign(new_data, this.data)
         return this
     },
