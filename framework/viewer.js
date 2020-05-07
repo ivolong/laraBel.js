@@ -12,8 +12,7 @@ module.exports = {
     },
     
     with: function (new_data) {
-        current_data = this.data
-        this.data = {current_data, new_data} 
+        this.data = new_data
         return this
     },
     
