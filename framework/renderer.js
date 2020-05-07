@@ -29,7 +29,7 @@ module.exports = {
                 escapeCharacters(this.data[property])
             )
                 
-            this.html = html.replace(
+            this.html = this.html.replace(
                 '{!! ' + property + ' !!}',
                 this.data[property]
             )
