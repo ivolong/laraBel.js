@@ -13,8 +13,8 @@ function escapeCharacters (text) {
 }
 
 module.exports = {
-    this.html = null,
-    this.data = null,
+    html = null,
+    data = null,
     
     render: function (html, data) {
         this.data = data
