@@ -12,10 +12,11 @@ module.exports = {
     },
     
     with: function (new_data) {
-        for (property in process.env) {
-            this.data[property] = process.env[property]
-        }
+//         for (property in process.env) {
+//             this.data[property] = process.env[property]
+//         }
         
+        this.data = Object.assign(process.env, this.data)
         this.data = Object.assign(new_data, this.data)
         return this
     },
