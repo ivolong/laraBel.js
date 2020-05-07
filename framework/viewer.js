@@ -22,12 +22,12 @@ module.exports = {
                 return response.status(400).send("View not found")
             }
 	        
-            for (variable in this.data) {
+            //for (variable in this.data) {
                 html.replace(
                     '{{ variable }}',
                     'here'
                 )
-            }
+            //}
             
             return response.send(html)
         })
