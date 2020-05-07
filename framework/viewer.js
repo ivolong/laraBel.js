@@ -22,17 +22,14 @@ module.exports = {
                 return response.status(400).send("View not found")
             }
 	        
-            //for (variable in this.data) {
-//                 html.replace(
-//                     '{{ variable }}',
-//                     'here'
-//                 )
-            //}
-            
-            return response.send(html.replace(
+            for (variable in this.data) {
+                html = html.replace(
                     '{{ variable }}',
                     'here'
-                ))
+                )
+            }
+            
+            return response.send(html)
         })
     },
 }
