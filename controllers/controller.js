@@ -2,7 +2,7 @@ const viewer = require(__dirname + "/../framework/viewer.js")
 
 const controller = {
     index: function (request, response) {
-        return viewer.send(response, "index.html")
+        return viewer.file("index.html").send(response)
     },
 }
 
