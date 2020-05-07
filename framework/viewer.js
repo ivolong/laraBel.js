@@ -12,7 +12,7 @@ module.exports = {
     },
     
     with: function (new_data) {
-        this.data = new_data 
+        this.data = {this.data, new_data} 
         return this
     },
     
