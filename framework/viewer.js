@@ -26,7 +26,7 @@ module.exports = {
 	        
             for (property in this.data) {
                 html = html.replace(
-                    '{{ framework }}',
+                    '{{ ' + property + ' }}',
                     this.data[property]
                 )
             }
