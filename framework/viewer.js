@@ -1,12 +1,13 @@
 const path = require("path")
+const fs = require("fs")
 
 module.exports = {
     data: null,
     
-    view: null,
+    view_uri: null,
     
     file: function (file_uri) {
-        this.view = __dirname + "/../views/" + file_uri
+        this.view_uri = __dirname + "/../views/" + file_uri
         return this
     },
     
@@ -16,6 +17,17 @@ module.exports = {
     },
     
     send: function (response) {
-        return response.sendFile(path.join(this.view))
+        fs.readFile(path.resolve(this.view_uri), "utf8", (error, html) => {
+            if (error) {
+                return response.status(400).send("View not found")
+            }
+            
+            return response.send(
+                html.replace(
+                    '{{ variable }}',
+                    `here`
+                )
+            )
+        })
     },
 }
