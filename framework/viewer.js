@@ -1,6 +1,20 @@
 const path = require("path")
 const fs = require("fs")
 
+function escapeCharacters (text) {
+    var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    }
+
+    return text.replace(/[&<>"']/g, function (m) {
+        return map[m]
+    })
+}
+
 module.exports = {
     data: {},
     
@@ -12,10 +26,6 @@ module.exports = {
     },
     
     with: function (new_data) {
-//         for (property in process.env) {
-//             this.data[property] = process.env[property]
-//         }
-        
         this.data = Object.assign(process.env, this.data)
         this.data = Object.assign(new_data, this.data)
         return this
@@ -30,6 +40,11 @@ module.exports = {
             for (property in this.data) {
                 html = html.replace(
                     '{{ ' + property + ' }}',
+                    escapeCharacters(this.data[property])
+                )
+                
+                html = html.replace(
+                    '{!! ' + property + ' !!}',
                     this.data[property]
                 )
             }
