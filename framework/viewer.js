@@ -22,7 +22,7 @@ module.exports = {
             if (error) {
                 return response.status(400).send("View not found")
             }
-	        
+	        console.log(this.data)
             for (property in this.data) {
                 html = html.replace(
                     '{{ ' + property + ' }}',
