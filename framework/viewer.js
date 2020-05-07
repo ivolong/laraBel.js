@@ -5,7 +5,6 @@ const renderer = require(__dirname + "/renderer.js")
 
 module.exports = {
     data: {},
-    
     view_uri: null,
     
     file: function (file_uri) {
