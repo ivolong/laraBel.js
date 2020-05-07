@@ -1,6 +1,6 @@
 const path = require("path")
 
-const viewer = {
+module.exports = {
     data: null,
     
     view: null,
@@ -19,5 +19,3 @@ const viewer = {
         return response.sendFile(path.join(this.view))
     },
 }
-
-module.exports = viewer
