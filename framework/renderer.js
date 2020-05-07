@@ -19,7 +19,7 @@ module.exports = {
     render: function (html, data) {
         this.data = data
         this.html = html
-        return this.variables()
+        return this.variables().final()
     },
     
     variables: function () {
@@ -29,12 +29,16 @@ module.exports = {
                 escapeCharacters(this.data[property])
             )
                 
-            html = html.replace(
+            this.html = html.replace(
                 '{!! ' + property + ' !!}',
                 this.data[property]
             )
         }
         
         return this
+    },
+    
+    final: function () {
+        return this.html
     },
 }
