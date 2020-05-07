@@ -24,7 +24,7 @@ module.exports = {
 	        
             for (variable in this.data) {
                 html.replace(
-                    `{{ ` + variable +` }}`,
+                    `{{ variable }}`,
                     this.data[variable]
                 )
             }
