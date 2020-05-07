@@ -36,7 +36,7 @@ module.exports = {
 //                 )
 //             }
             
-            return response.send(renderer.render(html, data))
+            return response.send(renderer.render(html, this.data))
         })
     },
 }
