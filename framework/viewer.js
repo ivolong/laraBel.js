@@ -22,9 +22,9 @@ module.exports = {
                 return response.status(400).send("View not found")
             }
 	        
-            for (variable in this.data) {
+            for (property in this.data) {
                 html = html.replace(
-                    '{{ ' + variable + ' }}',
+                    '{{ environment }}',
                     this.data[variable]
                 )
             }
