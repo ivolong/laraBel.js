@@ -21,22 +21,12 @@ module.exports = {
     send: function (response) {
         fs.readFile(path.resolve(this.view_uri), "utf8", (error, html) => {
             if (error) {
-                return response.status(400).send("View not found")
+                return response.status(500).send("View not found")
             }
             
-//             for (property in this.data) {
-//                 html = html.replace(
-//                     '{{ ' + property + ' }}',
-//                     escapeCharacters(this.data[property])
-//                 )
-                
-//                 html = html.replace(
-//                     '{!! ' + property + ' !!}',
-//                     this.data[property]
-//                 )
-//             }
+            rendered = renderer.render(html, this.data)
             
-            return response.send(renderer.render(html, this.data))
+            return response.send(rendered)
         })
     },
 }
