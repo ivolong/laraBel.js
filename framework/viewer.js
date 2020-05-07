@@ -21,13 +21,13 @@ module.exports = {
             if (error) {
                 return response.status(400).send("View not found")
             }
-			
-			for (variable in this.data) {
-				html.replace(
+	        
+            for (variable in this.data) {
+                html.replace(
                     `{{ ` + variable +` }}`,
                     this.data[variable]
                 )
-			}
+            }
             
             return response.send(html)
         })
