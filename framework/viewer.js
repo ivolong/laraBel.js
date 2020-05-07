@@ -25,7 +25,7 @@ module.exports = {
             for (property in this.data) {
                 html = html.replace(
                     '{{ environment }}',
-                    this.data[variable]
+                    this.data[property]
                 )
             }
             
