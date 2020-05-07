@@ -23,13 +23,16 @@ module.exports = {
             }
 	        
             //for (variable in this.data) {
-                html.replace(
-                    '{{ variable }}',
-                    'here'
-                )
+//                 html.replace(
+//                     '{{ variable }}',
+//                     'here'
+//                 )
             //}
             
-            return response.send(html)
+            return response.send(html.replace(
+                    '{{ variable }}',
+                    'here'
+                ))
         })
     },
 }
