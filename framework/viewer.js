@@ -12,7 +12,8 @@ module.exports = {
     },
     
     with: function (new_data) {
-        this.data = new_data
+        current_data = this.data
+        this.data = Object.assign(new_data, this.data)
         return this
     },
     
