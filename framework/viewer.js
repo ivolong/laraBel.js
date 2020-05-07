@@ -9,8 +9,8 @@ const viewer = {
         return this
     },
     
-    with: function (data) {
-        this.data[data.key] = data.value 
+    with: function (new_data) {
+        this.data = new_data 
         return this
     },
     
