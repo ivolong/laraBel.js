@@ -1,19 +1,7 @@
 const path = require("path")
 const fs = require("fs")
 
-function escapeCharacters (text) {
-    var map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;'
-    }
-
-    return text.replace(/[&<>"']/g, function (m) {
-        return map[m]
-    })
-}
+const renderer = require(__dirname + "/controllers/renderer.js")
 
 module.exports = {
     data: {},
@@ -37,19 +25,19 @@ module.exports = {
                 return response.status(400).send("View not found")
             }
             
-            for (property in this.data) {
-                html = html.replace(
-                    '{{ ' + property + ' }}',
-                    escapeCharacters(this.data[property])
-                )
+//             for (property in this.data) {
+//                 html = html.replace(
+//                     '{{ ' + property + ' }}',
+//                     escapeCharacters(this.data[property])
+//                 )
                 
-                html = html.replace(
-                    '{!! ' + property + ' !!}',
-                    this.data[property]
-                )
-            }
+//                 html = html.replace(
+//                     '{!! ' + property + ' !!}',
+//                     this.data[property]
+//                 )
+//             }
             
-            return response.send(html)
+            return response.send(renderer.render(html, data))
         })
     },
 }
