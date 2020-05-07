@@ -12,7 +12,7 @@ module.exports = {
     },
     
     with: function (new_data) {
-        this.data.assign(new_data)
+        this.data = Object.assign(new_data, this.data)
         return this
     },
     
@@ -21,8 +21,6 @@ module.exports = {
             if (error) {
                 return response.status(400).send("View not found")
             }
-            
-            console.log(this.data)
 	        
             for (property in this.data) {
                 html = html.replace(
