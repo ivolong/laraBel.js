@@ -37,3 +37,7 @@ Declare the controller in `routes.js` so that it can be used:
 JavaScript code can be executed in the controllers to return variables which can then be passed into the view via and `Object` to be renderd by the server:
 
 	return viewer.file("log-in.html").with({ variable: "value" }).send()
+	
+Variables can then be called in the view file using the syntax:
+
+	{{ variable }}
