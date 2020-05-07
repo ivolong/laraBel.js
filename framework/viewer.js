@@ -1,7 +1,8 @@
 const path = require("path")
 
 const viewer = {
-    data: {},
+    data: null,
+    
     view: null,
     
     file: function (file_uri) {
