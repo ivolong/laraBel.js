@@ -19,7 +19,7 @@ module.exports = {
     render: function (html, data) {
         this.data = data
         this.html = html
-        return this.html.variables()
+        return this.variables()
     },
     
     variables: function () {
@@ -35,6 +35,6 @@ module.exports = {
             )
         }
         
-        return this.html
+        return this
     },
 }
