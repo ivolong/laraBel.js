@@ -1,5 +1,7 @@
 const controller = require(__dirname + "/controllers/controller.js")
 
-module.exports = function (app) {
+const routes = function (app) {
     app.get('/', controller.index)
 }
+
+module.exports = routes
