@@ -7,8 +7,8 @@ function escapeCharacters (text) {
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
-        """: "&quot;",
-        """: "&#039;"
+        '"': "&quot;",
+        '"': "&#039;"
     }
 
     return text.replace(/[&<>""]/g, function (m) {
