@@ -4,7 +4,8 @@ module.exports = {
     index: function (request, response) {
         return viewer.file("index.html")
             .with({
-                title: "Index"
+                title: "Index",
+                arrayTest: ["yes", "no"]
             })
             .send(response)
     },
