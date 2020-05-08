@@ -4,14 +4,14 @@ function escapeCharacters (text) {
     }
     
     var map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;'
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        """: "&quot;",
+        """: "&#039;"
     }
 
-    return text.replace(/[&<>"']/g, function (m) {
+    return text.replace(/[&<>""]/g, function (m) {
         return map[m]
     })
 }
@@ -29,12 +29,12 @@ module.exports = {
     variables: function () {
         for (property in this.data) {
             this.html = this.html.replace(
-                '{{ ' + property + ' }}',
+                "{{ " + property + " }}",
                 escapeCharacters(this.data[property])
             )
                 
             this.html = this.html.replace(
-                '{! ' + property + ' !}'
+                "{! " + property + " !}",
                 this.data[property]
             )
         }
