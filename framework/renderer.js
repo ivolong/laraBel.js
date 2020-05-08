@@ -1,4 +1,8 @@
 function escapeCharacters (text) {
+    if (typeof text != "string") {
+        return text
+    }
+    
     var map = {
         '&': '&amp;',
         '<': '&lt;',
