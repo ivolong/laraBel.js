@@ -34,7 +34,7 @@ module.exports = {
             )
                 
             this.html = this.html.replace(
-                '[[ ' + property + ' ]]',
+                '{! ' + property + ' !}'
                 this.data[property]
             )
         }
