@@ -1,4 +1,6 @@
-# bMVC.js
+# lara🅱️el.js
+
+Where the B stands for basic.
 
 So basic that the only thing I've done so far is the -VC.
 
