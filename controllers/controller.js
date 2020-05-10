@@ -1,6 +1,6 @@
 const viewer = require(__dirname + "/../framework/viewer.js")
 
-module.exports = {
+const controller = {
     index: function (request, response) {
         return viewer.file("index.html")
             .with({
@@ -9,3 +9,5 @@ module.exports = {
             .send(response)
     },
 }
+
+module.exports = controller
